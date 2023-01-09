@@ -1,11 +1,7 @@
-import CallToAction from "./CallToAction";
-import Specials from './Specials';
-
-const Main = () => {
+const Main = ({children}) => {
     return (
         <article>
-            <CallToAction />
-            <Specials />
+            {children}
         </article>
     );
 }

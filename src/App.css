@@ -100,6 +100,11 @@ a {
     font-weight: bold;
     color: #495E57;
   }
+
+  /* BOOKING PAGE */
+  #bookingFormComponent {
+    padding: 2%;
+  }
 }
 
 @media screen and (min-width: 720px) {
