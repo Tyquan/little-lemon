@@ -1,3 +1,4 @@
+import { Link } from 'react-router-dom';
 import logo from '../images/logo.png';
 import hamburgerIcon from '../images/handburgerIcon.png';
 import cart from '../images/cart.jpg';
@@ -10,7 +11,11 @@ const Header = () => {
                 <img src={hamburgerIcon} id="navImage" alt="Nav Button" />
             </div>
             <div id="logoComponent">
-                <img id="logoImage" src={logo} alt="Little Lemon Logo" />
+                <center>
+                    <Link to="/">
+                        <img id="logoImage" src={logo} alt="Little Lemon Logo" />
+                    </Link>
+                </center>
             </div>
             <div id="navComponent">
                 <Nav />

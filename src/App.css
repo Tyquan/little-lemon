@@ -1,24 +1,30 @@
 body {
   margin: 0;
   padding: 0;
+  font-family:system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+a {
+  text-decoration: none;
 }
 
 @media screen and (min-width: 300px) {
   header {
     display: flex;
     flex-direction: row;
+    height: 100px;
     /* justify-content: space-between; */
   }
   
   #logoComponent {
-    width: 60%;
+    width: 74%;
     
   }
   #navButton {
-    width: 20%;
+    width: 15%;
   }
   #cartButton {
-    width: 20%;
+    width: 16%;
   }
   
   #navComponent {
@@ -26,13 +32,73 @@ body {
   }
   
   #logoImage {
-    width: 55%;
+    width: 30%;
   }
   #navImage {
     width: 100%;
   }
   #cartImage {
     width: 100%;
+  }
+  #heroSection {
+    background-color: #495E57;
+    padding: 2%;
+    color: white;
+    display: flex;
+  }
+  #heroDetailsSection {
+    width: 55%;
+  }
+  #heroImageSection {
+    width: 45%;
+  }
+  #heroImage {
+    width: 100%;
+    margin-top: 30%;
+  }
+  #heroMain {
+    font-size: 35px;
+    margin: 0;
+    color: #F4CE14;
+  }
+  #heroLocation {
+    margin-top: 0;
+    margin-bottom: 50px;
+  }
+  #makeReservationButton {
+    background-color: #F4CE14;
+    margin-top: 30%;
+    padding: 2%;
+    border-radius: 16px;
+    margin-bottom: 10%;
+  }
+  #makeReservationButton h3 {
+    align-items: center;
+    text-align: center;
+    color: black;
+    text-decoration: none;
+  }
+  #specialsSection {
+    padding: 2%;
+  }
+  #specialsSection p {
+    width: 75%;
+    color: #495E57;;
+  }
+  #menuItems {
+    display: flex;
+    flex-direction: row;
+    list-style-type: none;
+  }
+  #menuItems li {
+    width: 20%;
+    margin: 4%;
+    background-color: #EDEFEE;
+    text-align: center;
+    padding: 1%;
+    border-radius: 16px;
+    font-weight: bold;
+    color: #495E57;
   }
 }
 
@@ -57,14 +123,61 @@ body {
   }
   #navItems {
     display: flex;
-    justify-content: space-around;
+    /* justify-content: space-around; */
     list-style-type: none;
+    width: 100%;
   }
-  
+  #navItems li {
+    width: 30%;
+  }
   #navItems a {
     text-decoration: none;
     color: black;
   }
+  #cartImage {
+    width: 90%;
+  }
+  #heroMain {
+    margin-top: 10%;
+  }
 
+}
+
+@media screen and (min-width: 1000px) {
+  #logoImage {
+    width: 40%;
+  }
+  #cartImage {
+    width: 35%;
+  }
+  #heroMain {
+    font-size: 80px;
+  }
+  #heroLocation {
+    font-size: 60px;
+  }
+  #heroDetails {
+    font-size: 20px;
+  }
+  #heroDetailsSection {
+    width: 30%;
+  }
+  #heroImage {
+    width: 50%;
+    margin-top: 0%;
+  }
+  #heroImageSection {
+    width: 70%
+  }
+  #specialsSection h3 {
+    font-size: 40px
+  }
+
+  #specialsItem h4 {
+    font-size: 30px;
+  }
+  #specialItem p {
+    font-size: 20px;
+  }
 }
 

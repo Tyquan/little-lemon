@@ -1,6 +1,12 @@
+import CallToAction from "./CallToAction";
+import Specials from './Specials';
+
 const Main = () => {
     return (
-        <h1>Main</h1>
+        <article>
+            <CallToAction />
+            <Specials />
+        </article>
     );
 }
 

@@ -1,16 +1,17 @@
+import {Routes, Route, BrowserRouter} from 'react-router-dom';
 import './App.css';
-import Footer from './components/Footer';
-import Header from './components/Header';
-import Main from './components/Main';
+import HomePage from './components/Hompage';
+import BookingPage from './components/BookingPage';
 
-function App() {
-  return (
-    <div>
-      <Header />
-      <Main />
-      <Footer />
-    </div>
-  );
+const Nav = () => {
+    return (
+        <BrowserRouter>
+            <Routes id="navItems">
+                <Route exact path='/' element=<HomePage />/>
+                <Route exact path='/reserve' element=<BookingPage />/>
+            </Routes>
+        </BrowserRouter>
+    );
 }
 
-export default App;
+export default Nav;
