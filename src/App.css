@@ -3,31 +3,68 @@ body {
   padding: 0;
 }
 
-header {
-  width: 100%;
-  height: 200px;
-  margin: 1%;
-  display: flex;
-  flex-direction: row;
+@media screen and (min-width: 300px) {
+  header {
+    display: flex;
+    flex-direction: row;
+    /* justify-content: space-between; */
+  }
+  
+  #logoComponent {
+    width: 60%;
+    
+  }
+  #navButton {
+    width: 20%;
+  }
+  #cartButton {
+    width: 20%;
+  }
+  
+  #navComponent {
+    display: none;
+  }
+  
+  #logoImage {
+    width: 55%;
+  }
+  #navImage {
+    width: 100%;
+  }
+  #cartImage {
+    width: 100%;
+  }
 }
 
-#logoComponent {
-  width: 10%;
+@media screen and (min-width: 720px) {
+  #navButton {
+    display: none;
+  }
+
+  #navComponent {
+    display: flex;
+    width: 60%;
+    align-items: center;
+  }
+  #logoComponent {
+    width: 20%;
+  }
+  #cartButton {
+    width: 15%;
+  }
+  #logoImage {
+    width: 100%;
+  }
+  #navItems {
+    display: flex;
+    justify-content: space-around;
+    list-style-type: none;
+  }
+  
+  #navItems a {
+    text-decoration: none;
+    color: black;
+  }
+
 }
 
-#navComponent {
-  width: 90%;
-}
-
-#logoImage {
-  width: 100%;
-}
-
-#navItems {
-  flex-flow: row wrap;
-  justify-content: center;
-}
-
-#navItems a {
-  text-decoration: none;
-}
