@@ -1,10 +1,10 @@
-import { Link } from 'react-router-dom';
-import logo from '../images/logo.png'
 import Chicago from './Chicago';
+import {Link} from 'react-router-dom';
+import food from '../images/food1.png';
 
 function CallToAction(){
     return (
-        <section id="heroSection">
+        <article id="heroSection">
             <section id="heroDetailsSection">
                 <h1 id="heroMain">Little Lemon</h1>
                 <h2 id="heroLocation">Chicago</h2>
@@ -17,10 +17,10 @@ function CallToAction(){
             </section>
             <section id="heroImageSection">
                 <center>
-                    <img src={logo} alt="logo" id="heroImage" />
+                    <img src={food} alt="logo" id="heroImage" />
                 </center>
             </section>
-        </section>
+        </article>
     );
 }
 

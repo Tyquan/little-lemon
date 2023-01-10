@@ -1,4 +1,3 @@
-import Main from './Main'
 import BookingForm from "./BookingForm";
 import Header from "./Header";
 import { useState } from 'react';
@@ -6,20 +5,20 @@ import { fetchAPI } from '../api/api';
 
 function BookingPage() {
     const [resDate, setResDate] = useState(() => initializeTimes());
+    const [availableTimes, setAvailableTimes] = useState("");
 
     function initializeTimes() {
         return fetchAPI(new Date());
     }
     function updateTimes(state){
-        console.log("State: ", state);
-        setResDate(fetchAPI(state));
+        setAvailableTimes(state);
     }
 
     return (
-        <Main>
+        <>
             <Header />
-            <BookingForm resDate={resDate} updateTimes={updateTimes} />
-        </Main>
+            <BookingForm resDate={resDate} availableTimes={availableTimes} updateTimes={updateTimes} setResDate={setResDate} />
+        </>
     );
 }
 
