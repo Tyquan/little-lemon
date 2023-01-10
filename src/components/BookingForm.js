@@ -80,7 +80,6 @@ function BookingForm({ resDate, availableTimes, updateTimes, setResDate }) {
                     </Select>
                     <FormErrorMessage>{formik.errors.occasion}</FormErrorMessage>
                 </FormControl>
-                <br />
                 <input type="submit" value="Reserve" id="makeReservationButton" />
             </form>
         </article>

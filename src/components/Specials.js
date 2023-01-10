@@ -39,9 +39,9 @@ function Specials() {
                         <section key={special.id} id="specialsItem">
                             <section class="row">
                                 <section class="col-9">
-                                    <h4>Greek Salad</h4>
-                                    <p>The famous greek salad of crispy lettuce, peppers, olives and our Chicago style feta cheese, garnished with crunchy garlic and rosemary croutons.</p>
-                                    <p>$12.99</p>
+                                    <h4>{special.name}</h4>
+                                    <p>{special.description}</p>
+                                    <p>${special.price}</p>
                                 </section>
                                 <section class="col-3">
                                     <img src={special.image} id="specialImage" alt="Special Food" />
