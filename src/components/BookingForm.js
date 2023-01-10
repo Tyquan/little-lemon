@@ -1,19 +1,32 @@
 import { useState } from "react";
+import { submitAPI } from "../api/api";
+import { useNavigate } from "react-router-dom";
 
-function BookingForm({ state, dispatch }) {
-    const [resDate, setResDate] = useState(Date.now);
+function BookingForm({ resDate, updateTimes }) {
+    const navigate = useNavigate();
+    const [resTime, setResTime] = useState("");
     const [guests, setGuests] = useState(0);
     const [occasion, setOccasion] = useState("");
 
+    function reserve() {
+        const data = {resDate, resTime, guests, occasion};
+        submitAPI(data);
+        navigate('/confirm');
+    }
+
     return (
         <section id="bookingFormComponent">
-            <h1>Reserve A Table</h1>
+            <h1 id="reserve">Reserve A Table</h1>
             <form>
                 <label htmlFor="resDate">Choose Date</label>
-                <input name="resDate" onChange={(e) => setResDate(e.target.value)} value={resDate} type="date" id="resDate" />
+                <br/>
+                <input name="resDate" onChange={(e) => {
+                    updateTimes(new Date(e.target.value))
+                }} value={resDate} type="date" id="resDate" />
                 <br />
                 <label htmlFor="res-time">Choose time</label>
-                <select id="res-time" name="resTime" onChange={(e) => dispatch({type: '', payload: e.target.value})}>
+                <br />
+                <select value={resTime} id="res-time" name="resTime" onChange={(e) => setResTime(e.target.value)}>
                     <option value="17:00">17:00</option>
                     <option value="18:00">18:00</option>
                     <option value="19:00">19:00</option>
@@ -23,15 +36,19 @@ function BookingForm({ state, dispatch }) {
                 </select>
                 <br />
                 <label htmlFor="guests">Number of guests</label>
+                <br />
                 <input value={guests} onChange={(e) => setGuests(e.target.value)} type="number" placeholder="1" min="1" max="10" id="guests" />
                 <br />
                 <label htmlFor="occasion">Occasion</label>
+                <br />
                 <select value={occasion} id="occasion" onChange={(e) => setOccasion(e.target.value)} name="occasion">
-                    <option>Birthday</option>
-                    <option>Anniversary</option>
+                    <option value="Birthday">Birthday</option>
+                    <option value="Anniversary">Anniversary</option>
                 </select>
                 <br />
-                <input type="submit" value="Make Your reservation"></input>
+                <div id="makeReservationButton" onClick={reserve}>
+                    <h3>Reserve</h3>
+                </div>
             </form>
         </section>
     );
